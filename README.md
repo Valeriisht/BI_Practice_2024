@@ -90,7 +90,17 @@ conda install bioconda::varscan
 
 VarScan mpileup2snp my.mpileup --min-var-freq 0.1 --output-vcf 1 > VarScan_results.vcf 
 
-
+Warning: No p-value threshold provided, so p-values will not be calculated
+Min coverage:	8
+Min reads2:	2
+Min var freq:	0.1
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from my.mpileup
+4640878 bases in pileup file
+8 variant positions (7 SNP, 1 indel)
+0 were failed by the strand-filter
+7 variant positions reported (7 SNP, 0 indel)
 
 
 
