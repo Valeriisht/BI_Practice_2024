@@ -103,9 +103,17 @@ Reading input from my.mpileup
 7 variant positions reported (7 SNP, 0 indel)
 
 
+###  Variant effect prediction
 
+conda install bioconda::snpeff
 
-
+touch snpEff.config 
+add k12.genome : ecoli_K12
+mkdir -p data/k12
+gunzip GCF_000005845.2_ASM584v2_genomic.gbff.gz
+cp GCF_000005845.2_ASM584v2_genomic.gbff data/k12/genes.gbk 
+snpEff build -genbank -v k12
+snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
 
 
 
