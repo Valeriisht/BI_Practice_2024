@@ -138,8 +138,7 @@ snpEff build -genbank -v k12
 snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
 
 
-
-
+### Подгружаем в IGV
 
 
 
