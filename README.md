@@ -6,8 +6,10 @@
 
 Создание окружения:
 
-- conda create -n hw_1_anib_resis
-- conda activate hw_1_anib_resis
+```sh
+conda create -n hw_1_anib_resis
+conda activate hw_1_anib_resis
+```
 
 Скачивание файла: 
 
@@ -19,16 +21,21 @@
 
 ### Смотрим статистику по файлу 
 
-- conda install -c bioconda seqkit
-
+```sh
+conda install -c bioconda seqkit
+```
 
 ### Установка FastQC файла 
 
-- brew install fastqc
+```sh
+brew install fastqc
+```
 
 ### Отчет FastQC
 
+```sh
 fastqc -o . /pathtofile1/file1.fastq /pathtofile2/file2.fastq 
+```
 
 file:///Users/valeriaistuganova/Desktop/BioInf/project1/amp_res_1_fastqc.html
 
@@ -46,7 +53,9 @@ file:///Users/valeriaistuganova/Desktop/BioInf/project1/amp_res_2_fastqc.html
 
 Обрезаем прочтения с помощью Trimmomatic через conda:bioconductor
 
-- trimmomatic PE -phred33 amp_res_1.fastq amp_res_2.fastq -baseout amp.results CROP:86 HEADCROP:20 | wc -l
+```sh
+trimmomatic PE -phred33 amp_res_1.fastq amp_res_2.fastq -baseout amp.results CROP:86 HEADCROP:20 | wc -l
+```
 
 Результат: 
 
@@ -54,11 +63,11 @@ Reverse Only Surviving: 0 (0,00%) Dropped: 0 (0,00%)
 
 TrimmomaticPE: Completed successfully
 
-       0
-
 ### FastQC после обрезки 
 
+```sh
 fastqc amp.results_1P amp.results_2P
+```
 
 Все хорошо!
 
@@ -66,38 +75,51 @@ fastqc amp.results_1P amp.results_2P
 
 - index 
 
+```sh
 bwa index GCF_000005845.2_ASM584v2_genomic.fna.gz 
-
+```
 - Alignment 
 
+```sh
 bwa mem GCF_000005845.2_ASM584v2_genomic.fna.gz amp.results_1P amp.results_2P > alignment.sam 
+```
+- Переводим в bam
 
-- Переводим в bam 
-
-samtools view -S -b alignment.sam > alignment.ba
-m
+```sh
+samtools view -S -b alignment.sam > alignment.bam
 samtools flagstat alignment.bam
+```
 
 - Невыровненные файлы запишем отдельно 
 
+```sh
 samtools view -f 4 -h alignment.sam | samtools fasta | head -40 > unmapped_reads.alignment.fa  
+```
 
-индексируем и сортируем bam 
+ - индексируем и сортируем bam 
 
+```sh
 samtools sort alignment.bam -o alignment_sorted.bam
 
 samtools index alignment_sorted.bam
+```
 
 ### Variant calling
 
+```sh
 samtools mpileup -f GCF_000005845.2_ASM584v2_genomic.fna alignment_sorted.bam >  my.mpileup
 
 conda install bioconda::varscan
+```
 
+- поиск однонуклеотидных замен
+
+```sh
 VarScan mpileup2snp my.mpileup --min-var-freq 0.1 --output-vcf 1 > VarScan_results.vcf 
+```
 
-Warning: No p-value threshold provided, so p-values will not be calculated
-
+- статистика
+  
 Min coverage:	8
 
 Min reads2:	2
@@ -121,6 +143,9 @@ Reading input from my.mpileup
 
 ###  Variant effect prediction
 
+- автоаннотиация
+
+```sh
 conda install bioconda::snpeff
 
 touch snpEff.config 
@@ -136,7 +161,7 @@ cp GCF_000005845.2_ASM584v2_genomic.gbff data/k12/genes.gbk
 snpEff build -genbank -v k12
 
 snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
-
+```
 
 ### Подгружаем в IGV
 
