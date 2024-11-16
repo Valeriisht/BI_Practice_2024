@@ -4,17 +4,17 @@
 
 ## Проекты
 
-- [**Проект №1**](# "Проект №1.What causes abtibiotic resistance?")
+- [**Проект №1**](# "Проект №1. What causes abtibiotic resistance?")
 - [**Проект №2**](# "Проект №2. “Why did I get the flu?”. Deep sequencing, error control, p-value, viral evolution..")
-
-# Проект №1. What causes abtibiotic resistance?
 
 Создание окружения:
 
 ```sh
-conda create -n hw_1_anib_resis
-conda activate hw_1_anib_resis
+conda create -n bioINF
+conda activate bioINF
 ```
+
+# Проект №1. What causes abtibiotic resistance?
 
 Скачивание файла: 
 
