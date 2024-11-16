@@ -173,6 +173,26 @@ snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
 
 ## Проект №2. “Why did I get the flu?”. Deep sequencing, error control, p-value, viral evolution..
 
+### 1. Скачиваем файлы секвенирования (SRA) с лейблом SRR1705851
+
+- линк: https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/001/SRR1705851/
+
+### 2. Скачивание референсного генома - reference sequence for the influenza hemagglutinin gene.
+
+- линк:
+
+Скачиваем через efetch по индентификатору:
+
+Установка в окружение:
+
+```sh
+sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
+```
+Комманда: 
+
+```sh
+efetch -db nucleotide -id KF848938.1 -format fasta > influenza_hemagglutinin.fa
+```  
 
 
 
