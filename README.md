@@ -4,7 +4,7 @@
 
 ## Проекты
 
-- [**Проект №1**](## 'Проект №1.')
+- [**Проект №1**](#проект-1-what-causes-abtibiotic-resistance?)
 - [**Проект №2**](# "Проект №2. “Why did I get the flu?”. Deep sequencing, error control, p-value, viral evolution..")
 
 Создание окружения:
