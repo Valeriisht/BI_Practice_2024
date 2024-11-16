@@ -192,8 +192,43 @@ sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edi
 
 ```sh
 efetch -db nucleotide -id KF848938.1 -format fasta > influenza_hemagglutinin.fa
-```  
+```
 
+Snakemake file - выравнивание
+
+- Сортировка
+
+```sh
+samtools sort influenza_hemagglutinin.SRR1705851.unsorted.bam -o influenza_hemagglutininюSRR1705851.sorted.bam
+```
+- Индексация
+
+```sh
+samtools index influenza_hemagglutinin.SRR1705851юsorted.bam
+```
+
+total length:	52717864
+average length:	147
+Number of reads: 361116
+
+- Статистика по выравниванию
+
+361349 + 0 in total (QC-passed reads + QC-failed reads)
+358265 + 0 primary
+0 + 0 secondary
+3084 + 0 supplementary
+0 + 0 duplicates
+0 + 0 primary duplicates
+361116 + 0 mapped (99.94% : N/A)
+358032 + 0 primary mapped (99.93% : N/A)
+0 + 0 paired in sequencing
+0 + 0 read1
+0 + 0 read2
+0 + 0 properly paired (N/A : N/A)
+0 + 0 with itself and mate mapped
+0 + 0 singletons (N/A : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5))
 
 
 
