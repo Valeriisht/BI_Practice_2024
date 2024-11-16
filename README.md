@@ -1,6 +1,11 @@
 #  Лабный журнал 
 
-###  Записаны основые команды, которые были использованы для реализации проекта.
+###  Записаны основые команды, которые были использованы для реализации проектов.
+
+## Проекты
+
+- [**Проект №1**](##Проект №1. What causes abtibiotic resistance?)
+- [**Проект №2**](##Проект №2. “Why did I get the flu?”. Deep sequencing, error control, p-value, viral evolution..)
 
 ## Проект №1. What causes abtibiotic resistance?
 
@@ -164,6 +169,10 @@ snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
 ```
 
 ### Подгружаем в IGV
+
+
+## Проект №2. “Why did I get the flu?”. Deep sequencing, error control, p-value, viral evolution..
+
 
 
 
