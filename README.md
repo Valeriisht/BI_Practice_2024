@@ -4,8 +4,8 @@
 
 ## Проекты
 
-- [**Проект №1**](## "Проект №1. What causes abtibiotic resistance?")
-- [**Проект №2**](## "Проект №2. “Why did I get the flu?”. Deep sequencing, error control, p-value, viral evolution..")
+- [**Проект №1**]("Проект №1. What causes abtibiotic resistance?")
+- [**Проект №2**]("Проект №2. “Why did I get the flu?”. Deep sequencing, error control, p-value, viral evolution..")
 
 ## Проект №1. What causes abtibiotic resistance?
 
