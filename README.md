@@ -177,6 +177,42 @@ snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
 
 - линк: https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/001/SRR1705851/
 
+Проверим качество 
+
+### Отчет FastQC
+
+```sh
+fastqc -o SRR1705851.fastq 
+```
+
+file:///Users/valeriaistuganova/Desktop/BioInf/project2/BioProject2/SRR1705851_fastqc.html
+
+
+Анализ:
+
+- Качество прочтений хорошее
+- Среднее качество хорошее
+- Шум от адаптеров - неоднородность состава нуклеотидов
+- GC-состав - пик один
+- Высокий уровень дупликаций - некотором смещении в сторону обогащения
+
+Необходимо отфильтровать - 10 первых нуклеотидов обрежем
+
+Обрезаем прочтения с помощью Trimmomatic через conda:bioconductor
+
+```sh
+trimmomatic PE -phred33 SRR1705851.fastq SRR1705851.results HEADCROP:10 | wc -l
+```
+
+### FastQC после обрезки 
+
+```sh
+fastqc SRR1705851.results
+```
+
+Все хорошо!
+
+
 ### 2. Скачивание референсного генома - reference sequence for the influenza hemagglutinin gene.
 
 - линк:
@@ -230,9 +266,76 @@ Number of reads: 361116
 0 + 0 with mate mapped to a different chr
 0 + 0 with mate mapped to a different chr (mapQ>=5))
 
+## Сортировка и индексация 
+
+```sh
+samtools sort influenza_hemagglutinin.SRR1705851.unsorted.bam -o influenza_hemagglutinin.SRR1705851.sorted.bam
+
+samtools index influenza_hemagglutinin.SRR1705851.sorted.bam
+```
+
+samtools mpileup -d 3 -f influenza_hemagglutinin.fa influenza_hemagglutinin.SRR1705851.sorted.bam > influenza_hemagglutinin.SRR1705851.mpileup
+
+VarScan mpileup2snp influenza_hemagglutinin.SRR1705851.mpileup --min-var-freq 0.95 --output-vcf 1 > VarScan_results.vcf 
+
+cat VarScan_results.vcf | awk 'NR>24 {print $1, $2, $4, $10}'
+
+cat VarScan_results.vcf | awk 'NR>24 {print $1, $2, $4, $10}' | awk -F ':' '{print $NF}' | awk -F ',' '{print $1}'
+
+(How many variants are reported back?) - 5 SNV
+
+Считаем глубину покрытия 
+
+awk '{sum += $3} END {if (NR > 0) print "Average coverage:", sum / NR; else print "No data"}' coverage.txt
+Average coverage: 29158,9 - Количество прочтений 
+
+
+grep -v '^>' influenza_hemagglutinin.fa | tr -d '\n' | wc -c
+    1665 - длина рефефренса
 
 
 
+awk - awk 'NR%4==2 { total += length($0); count++ } END { print total/count }' SRR1705851.results
+
+137,148 - Средняя длина рида 
 
 
+
+samtools depth influenza_hemagglutinin.SRR1705851.sorted.bam | awk '{sum += $3; count++} END {if (count > 0) print sum/count; else print 0}'
+
+29158,9
+
+Выставим d - 29159  - это средняя глубина прочтения
+
+
+Скачиваем контрольные образцы 
+
+wget -c -O SRR1705858.fastq.gz  ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/008/SRR1705858/SRR1705858.fastq.gz 
+wget -c -O SRR1705859.fastq.gz  ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/009/SRR1705859/SRR1705859.fastq.gz
+wget -c -O SRR1705860.fastq.gz  ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/000/SRR1705860/SRR1705860.fastq.gz 
+
+SRR1705858: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/008/SRR1705858/SRR1705858.fastq.gz 
+SRR1705859: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/009/SRR1705859/SRR1705859.fastq.gz 
+SRR1705860: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/000/SRR1705860/SRR1705860.fastq.gz 
+
+gunzip SRR1705858.fastq.gz SRR1705859.fastq.gz SRR1705860.fastq.gz
+
+
+bwa mem -t 16 influenza_hemagglutinin.fa SRR1705858.fastq 2> log | samtools view -b - | samtools sort -o SRR1705858.influenza_hemagglutinin.sorted.bam - | samtools index SRR1705858.influenza_hemagglutinin.sorted.bam
+bwa mem -t 16 influenza_hemagglutinin.fa SRR1705859.fastq 2> log | samtools view -b - | samtools sort  -o SRR1705859.influenza_hemagglutinin.sorted.bam - | samtools index SRR1705859.influenza_hemagglutinin.sorted.bam
+bwa mem -t 16 influenza_hemagglutinin.fa SRR1705860.fastq 2> log | samtools view -b - | samtools sort  -o SRR1705860.influenza_hemagglutinin.sorted.bam - | samtools index > SRR1705860.influenza_hemagglutinin.sorted.bam
+
+
+samtools mpileup  -f influenza_hemagglutinin.fa SRR1705858.influenza_hemagglutinin.sorted.bam > SRR1705858.influenza_hemagglutinin.mpileup
+samtools mpileup  -f influenza_hemagglutinin.fa SRR1705859.influenza_hemagglutinin.sorted.bam > SRR1705859.influenza_hemagglutinin.mpileup
+samtools mpileup  -f influenza_hemagglutinin.fa SRR1705860.influenza_hemagglutinin.sorted.bam > SRR1705860.influenza_hemagglutinin.mpileup
+
+VarScan mpileup2snp SRR1705858.influenza_hemagglutinin.mpileup --min-var-freq 0.001 --output-vcf 1 > VarScan_resultsSRR1705858.vcf 
+VarScan mpileup2snp SRR1705859.influenza_hemagglutinin.mpileup --min-var-freq 0.001 --output-vcf 1 > VarScan_resultsSRR1705859.vcf 
+VarScan mpileup2snp SRR1705860.influenza_hemagglutinin.mpileup --min-var-freq 0.001 --output-vcf 1 > VarScan_resultsSRR1705860.vcf 
+
+
+котрые надо проверить - 999 позиция и 72 позиция
+
+cat VarScan_resultsSRR1705858.vcf | awk 'NR>24 {sum += $10; count++} END {if (count > 0) print "Среднее значение:", sum/count; else print "Нет данных."}'
 
