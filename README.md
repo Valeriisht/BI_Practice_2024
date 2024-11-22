@@ -351,7 +351,7 @@ gunzip SRR1705858.fastq.gz SRR1705859.fastq.gz SRR1705860.fastq.gz
 ```
 - Выравнивание, сортировка и  индексация
 
- ``sh
+ ```sh
 bwa mem -t 16 influenza_hemagglutinin.fa SRR1705858.fastq 2> log | samtools view -b - | samtools sort -o SRR1705858.influenza_hemagglutinin.sorted.bam - | samtools index SRR1705858.influenza_hemagglutinin.sorted.bam
 bwa mem -t 16 influenza_hemagglutinin.fa SRR1705859.fastq 2> log | samtools view -b - | samtools sort  -o SRR1705859.influenza_hemagglutinin.sorted.bam - | samtools index SRR1705859.influenza_hemagglutinin.sorted.bam
 bwa mem -t 16 influenza_hemagglutinin.fa SRR1705860.fastq 2> log | samtools view -b - | samtools sort  -o SRR1705860.influenza_hemagglutinin.sorted.bam - | samtools index > SRR1705860.influenza_hemagglutinin.sorted.bam
