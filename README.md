@@ -173,6 +173,8 @@ snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
 
 ## Проект №2. “Why did I get the flu?”. Deep sequencing, error control, p-value, viral evolution..
 
+## Поиск SNV в исследуемом образце
+
 ### 1. Скачиваем файлы секвенирования (SRA) с лейблом SRR1705851
 
 **Проект сделан с помощью утилиты SnakeMaske, в репозитории приложен файл**
@@ -240,7 +242,7 @@ sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edi
 efetch -db nucleotide -id KF848938.1 -format fasta > influenza_hemagglutinin.fa
 ```
 
-- Выравнивание на референсный ген геммагглютинина (проведена индексация прежде), сортировка и индексация 
+### 3. Выравнивание на референсный ген геммагглютинина (проведена индексация прежде), сортировка и индексация 
 
 ```sh
 bwa mem -t 16 influenza_hemagglutinin.fa SRR1705851.fastq 2> log | samtools view -b - | samtools sort -o influenza_hemagglutinin.SRR1705851.sorted.bam - | samtools index influenza_hemagglutinin.SRR1705851.sorted.bam
@@ -264,7 +266,7 @@ bwa mem -t 16 influenza_hemagglutinin.fa SRR1705851.fastq 2> log | samtools view
 0 + 0 with mate mapped to a different chr
 0 + 0 with mate mapped to a different chr (mapQ>=5))
 
-### mpileup -  генерации текстового формата pileup из данных по выравниванию 
+### 4. mpileup -  генерации текстового формата pileup из данных по выравниванию 
 
 Важно указать флаг -d, который который задает максимальную  глубину покрытия, которую следует учитывать при генерации выходных данных.
 
@@ -313,7 +315,7 @@ grep -v '^>' influenza_hemagglutinin.fa | tr -d '\n' | wc -c
 samtools mpileup -d 360 000 -f influenza_hemagglutinin.fa influenza_hemagglutinin.SRR1705851.sorted.bam > influenza_hemagglutinin.SRR1705851.mpileup
 ```
 
-### Variant calling
+### 5. Variant calling
 
 Вывявление SNV с высокой частотой встречаемости:
 
@@ -329,11 +331,11 @@ VarScan mpileup2snp influenza_hemagglutinin.SRR1705851.mpileup --min-var-freq 0.
 ```
 Получили 21 вариант 
 
-### Парсинг VCF файла 
+### 6. Парсинг VCF файла 
 
 cat VarScan_results.vcf | awk 'NR>24 {print $1, $2, $4, $10}'
 
-### Обнаружение ошибок амплификации и секвенирования
+## Обнаружение ошибок амплификации и секвенирования
 
 - Скачиваем контрольные образцы 
 
@@ -362,7 +364,7 @@ samtools mpileup  -f influenza_hemagglutinin.fa SRR1705858.influenza_hemagglutin
 samtools mpileup  -f influenza_hemagglutinin.fa SRR1705859.influenza_hemagglutinin.sorted.bam > SRR1705859.influenza_hemagglutinin.mpileup
 samtools mpileup  -f influenza_hemagglutinin.fa SRR1705860.influenza_hemagglutinin.sorted.bam > SRR1705860.influenza_hemagglutinin.mpileup
 ```
-### Variant calling
+### 7. Variant calling
 
 ```sh
 VarScan mpileup2snp SRR1705858.influenza_hemagglutinin.mpileup --min-var-freq 0.001 --output-vcf 1 > VarScan_resultsSRR1705858.vcf 
@@ -370,11 +372,11 @@ VarScan mpileup2snp SRR1705859.influenza_hemagglutinin.mpileup --min-var-freq 0.
 VarScan mpileup2snp SRR1705860.influenza_hemagglutinin.mpileup --min-var-freq 0.001 --output-vcf 1 > VarScan_resultsSRR1705860.vcf 
 ```
 
-### IGC
+### 8. IGC
 
 Подгружаем в геномный браузер и фильтруем. Встречающиеся SNV и в контрольных образцах, и в исследуемом образце указывают на ошибки секвыенирования 
 
-### Парсинг vcf-файла 
+### 9. Парсинг vcf-файла 
 
 Парсинг vcf-файла осуществлялся в питоне с помощью библиотеки pandas - файл приложен в репозитории 
 
