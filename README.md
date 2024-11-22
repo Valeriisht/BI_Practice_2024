@@ -280,6 +280,12 @@ awk '{sum += $3} END {if (NR > 0) print "Average coverage:", sum / NR; else prin
 ``` 
 Получили Average coverage: 29158,9 
 
+#### Перепроверка 
+
+- Количество ридов из fastqc-report
+
+Number of reads: 361116
+
 - Посчитаем  длину рефефренса
 
 ```sh
@@ -296,17 +302,16 @@ grep -v '^>' influenza_hemagglutinin.fa | tr -d '\n' | wc -c
 
 137,148 - Средняя длина рида 
 
-Gjrhsnbt 
+- Покрытие
 
-samtools depth influenza_hemagglutinin.SRR1705851.sorted.bam | awk '{sum += $3; count++} END {if (count > 0) print sum/count; else print 0}'
+361116*137,148/1665 = 29 745,548  
 
-29158,9
+То есть, флаг d должен быть не меньше  29 745,548 
+Выставим d - 360 000 - по количесству ридов в целом, таким образом,  мы точно сохраним все возможные варианты 
 
-Выставим d - 29159  - это средняя глубина прочтения
-
-
-
+```sh
 samtools mpileup -d 360 000 -f influenza_hemagglutinin.fa influenza_hemagglutinin.SRR1705851.sorted.bam > influenza_hemagglutinin.SRR1705851.mpileup
+```
 
 ### Variant calling
 
@@ -322,7 +327,6 @@ VarScan mpileup2snp influenza_hemagglutinin.SRR1705851.mpileup --min-var-freq 0.
 ```sh
 VarScan mpileup2snp influenza_hemagglutinin.SRR1705851.mpileup --min-var-freq 0.001 --output-vcf 1 > VarScan_low_results.vcf
 ```
-
 Получили 21 вариант 
 
 ### Парсинг VCF файла 
