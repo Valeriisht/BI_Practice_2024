@@ -183,6 +183,10 @@ snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
 
 - линк: https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/001/SRR1705851/
 
+```sh
+wget -c -O SRR1705851.fastq.gz {URL1}
+```
+
 Проверим качество 
 
 ### Отчет FastQC
