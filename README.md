@@ -192,7 +192,7 @@ wget -c -O SRR1705851.fastq.gz {URL1}
 ### Отчет FastQC
 
 ```sh
-fastqc -o SRR1705851.fastq 
+fastqc  SRR1705851.fastq 
 ```
 
 file:///Users/valeriaistuganova/Desktop/BioInf/project2/BioProject2/SRR1705851_fastqc.html
