@@ -6,6 +6,7 @@
 
 - [**Проект №1**](#проект-1-what-causes-abtibiotic-resistance)
 - [**Проект №2**](#проект-2-why-did-i-get-the-flu-deep-sequencing-error-control-p-value-viral-evolution)
+- [**Проект №3**](#проект-2-why-did-i-get-the-flu-deep-sequencing-error-control-p-value-viral-evolution)
 
 Создание окружения:
 
@@ -385,5 +386,7 @@ VarScan mpileup2snp SRR1705860.influenza_hemagglutinin.mpileup --min-var-freq 0.
 Парсинг vcf-файла осуществлялся в питоне с помощью библиотеки pandas - файл приложен в репозитории 
 
 Посчитаны средние частоты SNV и стандартные отклонения в контрольных образцах. Пороговое значение для фильтрации оказалось равным ~ 0,4%. Частоты SNV, ниже порогового значения, рассматривались, как ошибки секвенирования.  
+
+# 
 
 
