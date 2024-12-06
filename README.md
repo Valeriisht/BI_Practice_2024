@@ -6,7 +6,7 @@
 
 - [**Проект №1**](#проект-1-what-causes-abtibiotic-resistance)
 - [**Проект №2**](#проект-2-why-did-i-get-the-flu-deep-sequencing-error-control-p-value-viral-evolution)
-- [**Проект №3**](#проект-3-e.coli-outbreak-investigation)
+- [**Проект №3**](#проект-3-ecoli-outbreak-investigation)
 
 Создание окружения:
 
