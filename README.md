@@ -6,7 +6,7 @@
 
 - [**Проект №1**](#проект-1-what-causes-abtibiotic-resistance)
 - [**Проект №2**](#проект-2-why-did-i-get-the-flu-deep-sequencing-error-control-p-value-viral-evolution)
-- [**Проект №3**](#проект-2-why-did-i-get-the-flu-deep-sequencing-error-control-p-value-viral-evolution)
+- [**Проект №3**](#проект-3-e.coli-outbreak-investigation)
 
 Создание окружения:
 
@@ -387,6 +387,159 @@ VarScan mpileup2snp SRR1705860.influenza_hemagglutinin.mpileup --min-var-freq 0.
 
 Посчитаны средние частоты SNV и стандартные отклонения в контрольных образцах. Пороговое значение для фильтрации оказалось равным ~ 0,4%. Частоты SNV, ниже порогового значения, рассматривались, как ошибки секвенирования.  
 
-# 
+## Проект №3. E.coli outbreak investigation 
+
+В данном проекте мы собираем геном патогенной кишечной палочки с помощью ассемблера Spades
+
+Реализация пунктов 1- приведена в файле Snakefile3
+
+1) Скачаем данные секвенирования TY2482 образца
+
+   - SRR292678 - paired end, insert size 470 bp (forward reads, reverse reads, 400 Mb each)
+   - SRR292862 – mate pair, insert size 2 kb, (forward reads, reverse reads, 200 Mb each)
+   - SRR292770 – mate pair, insert size 6 kb, (forward reads, reverse reads, 200 Mb each)
+
+2) Анализируем данные с помощью fastqc
+
+   Число ридов в каждом образце:
+   paired end: 5.5 M (1,5 дибликаты)
+   mate pair 2kb: 5.1 M
+   mate pair 6kb: 5.1 M
+
+All samples have sequences of a single length (49bp, 90bp)
+
+*Ремарка: Insert sizes refer to the length of the DNA fragments that are sequenced between the adapter sequences in a sequencing library*
+
+3) Запускаем multiqc
+
+- в целом данные очень хорошие (нисего не обрезаем)
+
+5) Определимся с длиной к-меров.
+
+Для подсчета к-меров используем  программу Jellyfish - производит быстрый подсчет кмеров (подсчитает частоту всех возможных кмеров заданной длины в наших данных)
+
+Подгружаем эту программу в окружение:
+
+```sh
+conda config --add channels conda-forge #удостоверимся, что доступен канал
+conda install jellyfish #установка
+jellyfish --version #проверка установки 
+```
+
+Опции программы:
+
+-m или «mer» задает длину.
+-C - игнорировать направленность (каждое чтение рассматривается как его обратное дополнение).
+-s - начальная оценка размера хэш-таблицы, которую использует jellyfish, set > genome size
+-o задает имя выходного файла
+
+Запускаем программу подсчета к-меров:
+
+```sh
+jellyfish count -m 31 -s 500000000 <(zcat {input.sample1}) <(zcat {input.sample2}) -o {output}
+```
+
+Визуализация по гистограмме - график приложен "jellyfish histo"
+
+Cлева находится список бинов (количество повторений к-мера или его «глубина»)
+Cправа - подсчет количества к-меров в данных, которые соответствуют данной категории
+
+Оценим размер генома по формуле: 
+
+
+N = (M*L)/(L-K+1)
+Размер генома = T/N
+
+- N - глубина покрытия
+- M - пик Kmer,
+- K - размер Kmer
+- L - средняя длина чтения
+- T - общее количество оснований
+
+N = (65*49)/(49-31+1)
+
+Визуализируем с помощью библиотеку matplotlib (файлы в папке "Histo_jellyfish") или онлайн приложения http://genomescope.org
+Пик приходится на 65 (покрытие)
+
+
+
+5) Запуск SPAdes
+
+Соберем геном кишечной палки 
+
+Запускаем на трех библиотеках для разрешения длинных/коротких повторов
+
+```sh
+spades.py -t 16 \
+--pe1-1 libraries/forward_PE.fastq.gz --pe1-2 libraries/reverse_PE.fastq.gz \
+--mp1-1 libraries/forward_MP_2.fastq.gz --mp1-2 libraries/reverse_MP_2.fastq.gz \
+--mp2-1 libraries/forward_MP_6.fastq.gz --mp2-2 libraries/reverse_MP_6.fastq.gz \
+-o results/spades/all
+```
+6) Оценка качества полученной сборки
+
+```sh
+quast.py results/three_libs_spades/contigs.fasta -o results/quast/
+quast.py results/three_libs_spades/scaffolds.fasta -o results/quast/
+```
+
+ QUAST
+
+
+
+ 7) Prokka - аннотация генома
+
+**Этот инструмент определяет координаты предполагаемых генов в контигах, а затем использует BLAST для аннотации на основе сходства, используя все белки из секвенированных бактериальных геномов в базе данных RefSeq**
+
+```sh
+prokka results/three_libs_spades/scaffolds.fasta -o results/prokka
+```
+
+8) Поиск ближайшего родственника *E. coli X*
+
+По эволюционно консервативному гену 16S ribosomal RNA
+
+Сначала вытащим этот ген из нашей патогенной бактерии с помощью  Barrnap
+
+```sh
+barrnap results/three_libs_spades_out/scaffolds.fasta --outseq results/barrnap/barr.fna
+```
+9) Идем в бласт и ищем макисмально похожий организм с таким же 16S RNA геном, как и наша бактерия
+
+Последовательность 16S RNA выровнялась на 
+
+Name and GenBank accession number of the reference *E.coli* strain: Escherichia coli 55989, NC_011748
+
+Скачиваем референсный геном:
+
+```sh
+efetch -db nucleotide -id NC_011748.1 -format fasta > 55989.fasta
+```
+
+10) Какова генетическая причина HUS?
+
+Проведем полногеномное сравнение с эталонным геномом и проанализируем регионы, в которых эти штаммы отличаются друг от друга
+
+ Используем Mauve программу для визуализации Locally Collinear Blocks (LCBs)
+ 
+ - Открываем программу и запускам выравнивание собранного генома и референса
+ - Визуализируем
+   
+ Locally Collinear Blocks (LCBs)
+
+ 
+Статистика по выравниванию: 
+
+
+Геном E. coli X кодирует гены токсинов, похожих на шига-токсин - StxA и StxB
+Происхождение этих генов токсинов у *E.coli* X - 
+
+
+11) Детекция генов устойчивости к антибиотикам
+
+use ResFinder (http://genepi.food.dtu.dk/resfinder) - специальный поиск в базе данных генов, связанных с устойчивостью к антибиотикам
+
+Выявление устойчивости к streptomycin - aminoglycoside - рядом располагаются гены рекомбиназ - перенос горизонтальный 
+
 
 
