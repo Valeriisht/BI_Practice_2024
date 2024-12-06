@@ -389,17 +389,17 @@ VarScan mpileup2snp SRR1705860.influenza_hemagglutinin.mpileup --min-var-freq 0.
 
 ## Проект №3. E.coli outbreak investigation 
 
-В данном проекте мы собираем геном патогенной кишечной палочки с помощью ассемблера Spades
+#### В данном проекте мы занимаемся сбором генома патогенной кишечной палочки, бактерии, вызвавшей вспышку заболевания. Для этого мы используем ассемблер SPAdes и проводим анализ факторов, которые могли способствовать возникновению патогенного штамма.
 
-Реализация пунктов 1- приведена в файле Snakefile3
+Реализация пунктов 1-4 приведена в файле Snakefile3 (Папка Project3/Snakefile)
 
-1) Скачаем данные секвенирования TY2482 образца
+### 1) Скачаем данные секвенирования TY2482 образца
 
    - SRR292678 - paired end, insert size 470 bp (forward reads, reverse reads, 400 Mb each)
    - SRR292862 – mate pair, insert size 2 kb, (forward reads, reverse reads, 200 Mb each)
    - SRR292770 – mate pair, insert size 6 kb, (forward reads, reverse reads, 200 Mb each)
 
-2) Анализируем данные с помощью fastqc
+### 2) Анализируем данные с помощью fastqc
 
    Число ридов в каждом образце:
    paired end: 5.5 M (1,5 дибликаты)
