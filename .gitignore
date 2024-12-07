@@ -1,5 +1,4 @@
 .
-.
 Project3/results/.*
 Project3/qc/.*
 Project3/qc/multiqc/.*
@@ -7,9 +6,7 @@ Project3/results/barrnap/.*
 Project3/results/jellyfish/.*
 Project3/results/quast/.*
 Project3/results/quast/pair_end/.*
-Project3/results/quast/pair_end/scaffolds/.*
 Project3/results/quast/three libraries/.*
-Project3/results/quast/three libraries/scaffolds/.*
 Project3/results/reference/.*
 
 
