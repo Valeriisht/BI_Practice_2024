@@ -436,7 +436,7 @@ jellyfish --version #проверка установки
 Запускаем программу подсчета к-меров:
 
 ```sh
-jellyfish count -m 31 -s 500000000 <(zcat {input.sample1}) <(zcat {input.sample2}) -o {output}
+jellyfish count -m 31 -s 10000000 <(zcat {input.sample1}) <(zcat {input.sample2}) -o {output}
 ```
 
 Визуализация по гистограмме - график приложен "jellyfish histo"
@@ -456,14 +456,16 @@ N = (M*L)/(L-K+1)
 - L - средняя длина чтения
 - T - общее количество оснований
 
-N = (65*49)/(49-31+1)
+N = (65*90)/(90-31+1) = 97.5
+T = 5499346 * 90
+Размер генома =  5499346 * 90 / 97.5 = 5.076.319
 
 Визуализируем с помощью библиотеку matplotlib (файлы в папке "Histo_jellyfish") или онлайн приложения http://genomescope.org
 Пик приходится на 65 (покрытие)
 
 
 
-5) Запуск SPAdes
+### 5) Запуск SPAdes
 
 Соберем геном кишечной палки 
 
@@ -482,7 +484,7 @@ spades.py -t 16 \
 --mp2-1 libraries/forward_MP_6.fastq.gz --mp2-2 libraries/reverse_MP_6.fastq.gz \
 -o results/spades/three_libs_spades_out
 ```
-6) Оценка качества полученной сборки
+### 6) Оценка качества полученной сборки
 
 - pair_end
   
@@ -498,7 +500,7 @@ python quast-5.3.0/quast.py results/spades/three_libs_spades_out/contigs.fasta -
 python quast-5.3.0/quast.py results/spades/three_libs_spades_out/scaffolds.fasta -o results/quast/all/scaffolds 
 ```
 
- 7) Prokka - аннотация генома
+### 7) Prokka - аннотация генома
 
 **Этот инструмент определяет координаты предполагаемых генов в контигах, а затем использует BLAST для аннотации на основе сходства, используя все белки из секвенированных бактериальных геномов в базе данных RefSeq**
 
@@ -506,7 +508,7 @@ python quast-5.3.0/quast.py results/spades/three_libs_spades_out/scaffolds.fasta
 prokka results/three_libs_spades/scaffolds.fasta -o results/prokka
 ```
 
-8) Поиск ближайшего родственника *E. coli X*
+### 8) Поиск ближайшего родственника *E. coli X*
 
 По эволюционно консервативному гену 16S ribosomal RNA
 
@@ -515,7 +517,7 @@ prokka results/three_libs_spades/scaffolds.fasta -o results/prokka
 ```sh
 barrnap results/three_libs_spades_out/scaffolds.fasta --outseq results/barrnap/barr.fna
 ```
-9) Идем в бласт и ищем макисмально похожий организм с таким же 16S RNA геном, как и наша бактерия
+### 9) Идем в бласт и ищем макисмально похожий организм с таким же 16S RNA геном, как и наша бактерия
 
 Последовательность 16S RNA выровнялась на 
 
@@ -527,7 +529,7 @@ Name and GenBank accession number of the reference *E.coli* strain: Escherichia 
 efetch -db nucleotide -id NC_011748.1 -format fasta > 55989.fasta
 ```
 
-10) Какова генетическая причина HUS?
+### 10) Какова генетическая причина HUS?
 
 Проведем полногеномное сравнение с эталонным геномом и проанализируем регионы, в которых эти штаммы отличаются друг от друга
 
@@ -542,7 +544,7 @@ efetch -db nucleotide -id NC_011748.1 -format fasta > 55989.fasta
 Происхождение этих генов токсинов у *E.coli* X - горизонтальный перенос и встравиание фага (рядом расположены гены интеграз) 
 
 
-11) Детекция генов устойчивости к антибиотикам
+### 11) Детекция генов устойчивости к антибиотикам
 
 use ResFinder (http://genepi.food.dtu.dk/resfinder) - специальный поиск в базе данных генов, связанных с устойчивостью к антибиотикам
 
