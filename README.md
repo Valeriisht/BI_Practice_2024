@@ -467,6 +467,12 @@ N = (65*49)/(49-31+1)
 
 Соберем геном кишечной палки 
 
+Запускаем только на парно-концевых прочтениях
+
+```sh
+spades.py -t 16 --pe1-1 libraries/forward_PE.fastq.gz --pe1-2 libraries/reverse_PE.fastq.gz -o results/spades/pair_end
+```
+
 Запускаем на трех библиотеках для разрешения длинных/коротких повторов
 
 ```sh
@@ -474,18 +480,23 @@ spades.py -t 16 \
 --pe1-1 libraries/forward_PE.fastq.gz --pe1-2 libraries/reverse_PE.fastq.gz \
 --mp1-1 libraries/forward_MP_2.fastq.gz --mp1-2 libraries/reverse_MP_2.fastq.gz \
 --mp2-1 libraries/forward_MP_6.fastq.gz --mp2-2 libraries/reverse_MP_6.fastq.gz \
--o results/spades/all
+-o results/spades/three_libs_spades_out
 ```
 6) Оценка качества полученной сборки
 
+- pair_end
+  
 ```sh
-quast.py results/three_libs_spades/contigs.fasta -o results/quast/
-quast.py results/three_libs_spades/scaffolds.fasta -o results/quast/
+python quast-5.3.0/quast.py results/spades/pair_end/contigs.fasta -o results/quast/pair_end/contigs
+python quast-5.3.0/quast.py results/spades/pair_end/scaffolds.fasta -o results/quast/pair_end/scaffolds 
 ```
 
- QUAST
+- all
 
-
+```sh
+python quast-5.3.0/quast.py results/spades/three_libs_spades_out/contigs.fasta -o results/quast/all/contigs
+python quast-5.3.0/quast.py results/spades/three_libs_spades_out/scaffolds.fasta -o results/quast/all/scaffolds 
+```
 
  7) Prokka - аннотация генома
 
@@ -526,13 +537,9 @@ efetch -db nucleotide -id NC_011748.1 -format fasta > 55989.fasta
  - Визуализируем
    
  Locally Collinear Blocks (LCBs)
-
  
-Статистика по выравниванию: 
-
-
 Геном E. coli X кодирует гены токсинов, похожих на шига-токсин - StxA и StxB
-Происхождение этих генов токсинов у *E.coli* X - 
+Происхождение этих генов токсинов у *E.coli* X - горизонтальный перенос и встравиание фага (рядом расположены гены интеграз) 
 
 
 11) Детекция генов устойчивости к антибиотикам
