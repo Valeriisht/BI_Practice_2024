@@ -7,6 +7,7 @@
 - [**Проект №1**](#проект-1-what-causes-abtibiotic-resistance)
 - [**Проект №2**](#проект-2-why-did-i-get-the-flu-deep-sequencing-error-control-p-value-viral-evolution)
 - [**Проект №3**](#проект-3-ecoli-outbreak-investigation)
+- [**Проект №4**](#проект-4-tardigrades-from-genestealers-to-space-marines)
 
 Создание окружения:
 
@@ -552,5 +553,5 @@ use ResFinder (http://genepi.food.dtu.dk/resfinder) - специальный п�
 
 Выявление устойчивости к streptomycin - aminoglycoside - рядом располагаются гены рекомбиназ - перенос горизонтальный 
 
-
+## Проект 4. Tardigrades: from genestealers to space marines 
 
