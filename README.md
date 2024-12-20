@@ -576,7 +576,12 @@ use ResFinder (http://genepi.food.dtu.dk/resfinder) - специальный п�
 3. Вытаскивание белковых последовательностей
 
 - С помощью программ the getAnnoFasta.pl script
-  
+
+
+4. Находим белки
+   
+  - makeblastdb -in augustus.whole.aa -dbtype prot  -out targidrata_db
+  - blastp -db targidrata_db -query peptides.fa -outfmt 6  -out protein_name   
 
 
 
