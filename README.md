@@ -606,7 +606,7 @@ ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/949/185/GCA_001949185.1_Rvar_4.0/GCA_00
    2) Выравниваем
       
    ```sh
-   blastp -query nucl_proteins -db swissprot -out protein_name -evalue 0.001 -outfmt "6 qseqid sacc evalue pident qcovs stitle"
+   blastp -db targidrata_db -query peptides.fa -outfmt "6 qseqid sacc evalue pident qcovs stitle" -out protein_name 
    ```
    Итог: обнаружено 36 белков 
 5.  Сохраняем только нужные последовательности
