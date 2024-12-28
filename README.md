@@ -623,9 +623,9 @@ quast.py GCA_001949185.1_Rvar_4.0_genomic.fna
   awk '{print $2}' protein_name | sort | uniq > protein_id.txt
   ```
 - Далее получаем аминокислотные последовательности белков 
-```sh
-seqtk subseq augustus.whole.aa protein_id.txt > protein_seq.fasta
-```
+  ```sh
+  seqtk subseq augustus.whole.aa protein_id.txt > protein_seq.fasta
+  ```
 6.  Предсказание с помощью TargetP Server и Wolf PSORT
    
 - PSORT предсказывает клеточную локализацию белков на основе наличия сигнального пептида на их N-конце.  
@@ -654,7 +654,7 @@ awk '$4 < 0.01 {print $1}' output_protein_type.txt > filter_protein_seq
 
 9. Создаем таблицу
 
-- По результатам делаем таблицу с информацией об обнаруженных белках (доступна под нащварием project4/result_table.csv
+- По результатам делаем таблицу с информацией об обнаруженных белках (доступна под нащварием project4/Results.csv
 
 
 
