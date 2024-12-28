@@ -564,6 +564,11 @@ use ResFinder (http://genepi.food.dtu.dk/resfinder) - специальный п�
 ```sh
 ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/949/185/GCA_001949185.1_Rvar_4.0/GCA_001949185.1_Rvar_4.0_genomic.fna.gz
 ```
+** Проверка качества сборки 
+
+```sh
+quast.py GCA_001949185.1_Rvar_4.0_genomic.fna
+```
 
 2. AUGUSTUS
 
