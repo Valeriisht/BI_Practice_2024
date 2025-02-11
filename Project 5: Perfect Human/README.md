@@ -7,8 +7,10 @@
 ## 1. Конвертируем формат 23andMe's raw data в стандартный vcf формат с помошью утилиты plink (можно также воспользоваться bcftools convert)
 
 Справка: Формат 23andMe представляет собой текстовый формат хранения данных генотипирования и содержит 4 поля, разделенных табуляцией
+
+Команда:
   
-``sh plink --23file ManuSporny-genome.txt --recode vcf --out snps_clean --output-chr MT --snps-only just-acgt ``
+- ``sh plink --23file ManuSporny-genome.txt --recode vcf --out snps_clean --output-chr MT --snps-only just-acgt ``
 
 - --snps-only исключает все варианты с одной или несколькими многосимвольными кодами аллелей
 существуют, из-за низкой вероятности двойного изменения пары оснований в одной и той же паре оснований)
