@@ -25,7 +25,7 @@
 
 На вход программа принимает исходный файл в формате 23andMe's
 
-Результат: Found 2708 markers at 2558 positions covering 15.4% of mtDNA. (полный отчет)
+Результат: Found 2708 markers at 2558 positions covering 15.4% of mtDNA. ([полный отчет](https://github.com/Valeriisht/BI_Practice_2024/blob/main/Project%205%3A%20Perfect%20Human/ManuSporny-genome%E2%80%94mtDNA%20Haplogroup%20Analysis%20Report.pdf))
 
   
 - Для определение по Y хромосоме воспользуемся тулом
