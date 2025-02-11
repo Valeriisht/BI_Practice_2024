@@ -660,7 +660,7 @@ awk '$4 < 0.01 {print $1}' output_protein_type.txt > filter_protein_seq
 
 # Проект 5. H+: Create your perfect person
 
-Лаб журнал проекта:  `[ https://github.com/Valeriisht/BI_Practice_2024/blob/main/project](https://github.com/Valeriisht/BI_Practice_2024/tree/main/Project%205%3A%20Perfect%20Human) `
+Лаб журнал проекта:  ` https://github.com/Valeriisht/BI_Practice_2024/tree/main/Project%205%3A%20Perfect%20Human `
 
 
 
