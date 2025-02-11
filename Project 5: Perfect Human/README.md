@@ -21,11 +21,16 @@
 
 ## 3. Определение гаплогруппы 
 
-- Для определение по митохондриальной ДНК воспользуемся тулом [mthap](https://dna.jameslick.com/mthap/)
+#### 1) Для определение по митохондриальной ДНК воспользуемся тулом [mthap](https://dna.jameslick.com/mthap/)
 
 На вход программа принимает исходный файл в формате 23andMe's
 
 Результат: Found 2708 markers at 2558 positions covering 15.4% of mtDNA. ([полный отчет](https://github.com/Valeriisht/BI_Practice_2024/blob/main/Project%205%3A%20Perfect%20Human/ManuSporny-genome%E2%80%94mtDNA%20Haplogroup%20Analysis%20Report.pdf))
 
-  
-- Для определение по Y хромосоме воспользуемся тулом
+Best mtDNA Haplogroup Matches: M6a
+
+- Гаплогруппа M6  встречается преимущественно в долине Инда и на западных берегах Бенгальского залива, где представлены ее субклады M6a и M6b.
+ 
+#### 2) Для определение по Y хромосоме воспользуемся тулом [Y-DNA_tool]([https://isogg.org/wiki/Y-DNA_tools](https://mitoydna.org/))
+
+
