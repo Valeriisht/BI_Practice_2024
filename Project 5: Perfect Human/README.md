@@ -50,13 +50,22 @@ Best mtDNA Haplogroup Matches: M6a
 - VCF-файл открываем в IGV, определяем, в каких генах находятся
 
 SNPs, отвечающие за цвет глаз: 
-- rs12913832 /AG/01  в *HERC2*
+- rs12913832 /AG/01  в *OCA2* - linked to blue or brown eye color
 - rs154537 G./00 *OCA2*
-- rs16891982 CG/01  в *SLC45A2*
-- rs1426654 AG/01 в *SLC24A5*
+- rs16891982 CG/01  в *SLC45A2* - G allele homozygosity is associated with light skin, hair, and eye color
+- rs1426654 AG/01 в *SLC24A5* 
 - rs885479 G./00 в *MC1R*
 - rs6119471 в *ASIP*
-- rs12203592 C./00 в *IRF4*
+- rs12203592 C./00 в *DUSP22*
+
+### 5. Аннотация всех SNP, отбор клинически значимых вариантов 
+
+- Воспользуемся тулом VEP (Variant Effect Predictor)
+
+Результаты работы: 
+- missense_variant: 55%
+
+Для идентификации роли обнаруженных SNV используем базу данных OMIM и также tool openCRAVAT
 
 
 
