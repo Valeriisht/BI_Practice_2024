@@ -65,6 +65,10 @@ SNPs, отвечающие за цвет глаз:
 Результаты работы: 
 - missense_variant: 55%
 
+- С помощью snpEff
+  - `sh java -jar snpEff.jar GRCh37.75 snps_clean.vcf  > snps_snpeff.vcf`
+  - ` sh java -jar SnpSift.jar annotate clinvar.vcf  snps_clean.vcf > snps_clean_snpsift_clinvar.vcf `
+
 Для идентификации роли обнаруженных SNV используем базу данных OMIM и также tool openCRAVAT
 
 
