@@ -10,10 +10,12 @@
 
 Команда:
   
-- ``sh plink --23file ManuSporny-genome.txt --recode vcf --out snps_clean --output-chr MT --snps-only just-acgt ``
+- ``sh plink --23file SNP_raw_v4_Full_20170514175358.txt  --recode vcf --out snps_clean --output-chr MT --snps-only just-acgt ``
 
 - --snps-only исключает все варианты с одной или несколькими многосимвольными кодами аллелей
 существуют, из-за низкой вероятности двойного изменения пары оснований в одной и той же паре оснований)
+
+Inferred sex: male.
 
 ## 2. Какое значения имеют SNPs в наших данных?
 
@@ -71,6 +73,19 @@ SNPs, отвечающие за цвет глаз:
 
 Для идентификации роли обнаруженных SNV используем базу данных OMIM и также tool openCRAVAT
 
+sed -e 's/^\d\+//' snps_clean.vcf | awk '{OFS="\t"; if (!/^#/){ print "chr"$1,$2-1,$2,$4"/"$5,"+" } }' > output.bed
 
+awk 'BEGIN {
+    # Заголовок VCF
+    printf("##fileformat=VCFv4.2\n");
+    printf("##INFO=<ID=END,Number=1,Type=Integer,Description=\"End position of the variant\">\n");
+    printf("#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\n");
+} 
+{
+    # Основное тело VCF
+    printf("%s\t%d\t.\tN\tN\t.\t.\tEND=%d\n", $1, $2 + 1, $3);
+}' convert37.bed > convert37.vcf
 
+plink --bfile convert37.bed --recode vcf --out convert37
 
+- ``sh plink --23file ManuSporny-genome.txt --recode vcf --out snps_clean --output-chr MT --snps-only just-acgt ``
