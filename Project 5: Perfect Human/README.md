@@ -27,23 +27,20 @@ Inferred sex: male.
 
 На вход программа принимает исходный файл в формате 23andMe's
 
-Результат: Found 2708 markers at 2558 positions covering 15.4% of mtDNA. ([полный отчет](https://github.com/Valeriisht/BI_Practice_2024/blob/main/Project%205%3A%20Perfect%20Human/ManuSporny-genome%E2%80%94mtDNA%20Haplogroup%20Analysis%20Report.pdf))
+Результат: Found 2708394 markers at 2137144 positions covering 100.0% of mtDNA. ([полный отчет](https://github.com/Valeriisht/BI_Practice_2024/blob/main/Project%205%3A%20Perfect%20Human/ManuSporny-genome%E2%80%94mtDNA%20Haplogroup%20Analysis%20Report.pdf))
 
-Best mtDNA Haplogroup Matches: M6a
-
-- Гаплогруппа M6  встречается преимущественно в долине Инда и на западных берегах Бенгальского залива, где представлены ее субклады M6a и M6b.
+Best mtDNA Haplogroup Matches: H2a2a1
  
-#### 2) Для определение по Y хромосоме воспользуемся тулом [Y-DNA_tool](https://ytree.morleydna.com/extractFromAutosomal)
+#### 2) Для определение по Y хромосоме воспользуемся тулом [Y-DNA_tool](https://ytree.morleydna.com/extractFromAutosomal) и [cladefinder](https://cladefinder.yseq.net/)
 
-Результаты: Y - 3483 markers (1286 no-calls) (отчет)
+Результаты: 
+- 63 Y-DNA position(s) lacking mutations recognised by the genetic genealogy community. These Y-DNA positions may not be very useful.
+- 166 recognised mutation(s) with positive calls.
+- 733 recognised mutation(s) with negative calls.
+- 1086 recognised mutation(s) with no-calls.
+(отчет)
 
-Данные имеют:
-
-3480 unrecognised position(s). Are you using data from a source other than AncestryDNA, 23andMe or MyHeritage?
-1 recognised mutation(s) with positive calls.
-0 recognised mutation(s) with negative calls.
-1286 recognised mutation(s) with no-calls.
-
+Most specific position on the YFull YTree is R-M417 
 
 ### 4. Аннотация пола и цвета глаз 
 
@@ -58,34 +55,20 @@ SNPs, отвечающие за цвет глаз:
 - rs1426654 AG/01 в *SLC24A5* 
 - rs885479 G./00 в *MC1R*
 - rs6119471 в *ASIP*
-- rs12203592 C./00 в *DUSP22*
+- rs12203592 CT/01 в *DUSP22*
 
 ### 5. Аннотация всех SNP, отбор клинически значимых вариантов 
 
-- Воспользуемся тулом VEP (Variant Effect Predictor)
+- С помощью snpEff находим всю информацию об обнаруженных SNPs
+  
+  1) Скачиваем сборку
+     - ```   java -jar snpEff.jar download -v GRCh37.75 ```
+  2) Аннотируем
+     - ``` java -jar snpEff.jar -v GRCh37.75 ../snps_clean.vcf  > ../snps_snpeff.vcf ```
+- Связываем с фенотипом по базе ClinVar:
+  - ``` sh java -jar SnpSift.jar annotate clinvar.vcf  snps_clean.vcf > snps_clean_snpsift_clinvar.vcf ```
+- Отбираем клинически значимые варианты
+  - 
 
-Результаты работы: 
-- missense_variant: 55%
+Для идентификации роли обнаруженных SNV используем базу данных OMIM и также tool openCRAVAT, gnomAD и Franklin
 
-- С помощью snpEff
-  - `sh java -jar snpEff.jar GRCh37.75 snps_clean.vcf  > snps_snpeff.vcf`
-  - ` sh java -jar SnpSift.jar annotate clinvar.vcf  snps_clean.vcf > snps_clean_snpsift_clinvar.vcf `
-
-Для идентификации роли обнаруженных SNV используем базу данных OMIM и также tool openCRAVAT
-
-sed -e 's/^\d\+//' snps_clean.vcf | awk '{OFS="\t"; if (!/^#/){ print "chr"$1,$2-1,$2,$4"/"$5,"+" } }' > output.bed
-
-awk 'BEGIN {
-    # Заголовок VCF
-    printf("##fileformat=VCFv4.2\n");
-    printf("##INFO=<ID=END,Number=1,Type=Integer,Description=\"End position of the variant\">\n");
-    printf("#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\n");
-} 
-{
-    # Основное тело VCF
-    printf("%s\t%d\t.\tN\tN\t.\t.\tEND=%d\n", $1, $2 + 1, $3);
-}' convert37.bed > convert37.vcf
-
-plink --bfile convert37.bed --recode vcf --out convert37
-
-- ``sh plink --23file ManuSporny-genome.txt --recode vcf --out snps_clean --output-chr MT --snps-only just-acgt ``
