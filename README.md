@@ -9,6 +9,7 @@
 - [**Проект №3**](#проект-3-ecoli-outbreak-investigation)
 - [**Проект №4**](#проект-4-tardigrades-from-genestealers-to-space-marines)
 - [**Проект №5**](#проект-5-h-create-your-perfect-person)
+- [**Проект №6**](#проект-5-Differential RNA expression analysis)
 
 Создание окружения:
 
@@ -662,7 +663,9 @@ awk '$4 < 0.01 {print $1}' output_protein_type.txt > filter_protein_seq
 
 Лаб журнал проекта:  [README.me](https://github.com/Valeriisht/BI_Practice_2024/tree/main/Project%205%3A%20Perfect%20Human)
 
+# Проект 6. Differential RNA expression analysis
 
+Лаб журнал проекта:  [README.me](https://github.com/Valeriisht/BI_Practice_2024/tree/main/Project%205%3A%20Perfect%20Human)
 
 
 
