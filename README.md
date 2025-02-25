@@ -9,7 +9,8 @@
 - [**Проект №3**](#проект-3-ecoli-outbreak-investigation)
 - [**Проект №4**](#проект-4-tardigrades-from-genestealers-to-space-marines)
 - [**Проект №5**](#проект-5-h-create-your-perfect-person)
-- [**Проект №6**](#проект-5-Differential RNA expression analysis)
+- [**Проект №6**](#проект-6-differential-rna-expression-analysis)
+
 
 Создание окружения:
 
