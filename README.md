@@ -666,7 +666,7 @@ awk '$4 < 0.01 {print $1}' output_protein_type.txt > filter_protein_seq
 
 # Проект 6. Differential RNA expression analysis
 
-Лаб журнал проекта:  [README.me](https://github.com/Valeriisht/BI_Practice_2024/tree/main/Project%205%3A%20Perfect%20Human)
+Лаб журнал проекта:  [README.me](https://github.com/Valeriisht/BI_Practice_2024/tree/main/Project%206%3A%20Differential%20rna%20expression%20analysis%20#readme))
 
 
 
