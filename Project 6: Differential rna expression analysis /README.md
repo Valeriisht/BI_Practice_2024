@@ -67,7 +67,7 @@ hisat2-build <reference.fasta> <genome index>
 94.33% overall alignment rate
 ```
 
-в)Подсчет с  featureCounts
+в) Подсчет с  featureCounts
 
 featureCounts не может работать с файлами GFF. Нам необходимо преобразовать файл GFF в формат GTF. Для этого  воспользуемся программой gffread. 
 
