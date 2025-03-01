@@ -11,9 +11,8 @@
    - There are two replicates of RNA-seq data from yeast before and during fermentation
 
 ```
-SRR941816ftp.sra.ebi.ac.uk/vol1/fastq/SRR941/SRR941816/SRR941816.falsstq.gz (413 Mb)
-SRR941817: fermentation 0 minutes replicate 2 
-ftp.sra.ebi.ac.uk/vol1/fastq/SRR941/SRR941817/SRR941817.fastq.gz (455 Mb)
+SRR941816: fermentation 0 minutes replicate 2 ftp.sra.ebi.ac.uk/vol1/fastq/SRR941/SRR941816/SRR941816.falsstq.gz (413 Mb)
+SRR941817: fermentation 0 minutes replicate 2  ftp.sra.ebi.ac.uk/vol1/fastq/SRR941/SRR941817/SRR941817.fastq.gz (455 Mb)
 SRR941818: fermentation 30 minutes replicate 1 ftp.sra.ebi.ac.uk/vol1/fastq/SRR941/SRR941818/SRR941818.fastq.gz (79.3 Mb)
 SRR941819: fermentation 30 minutes replicate 2 ftp.sra.ebi.ac.uk/vol1/fastq/SRR941/SRR941819/SRR941819.fastq.gz (282 Mb)
 ```
