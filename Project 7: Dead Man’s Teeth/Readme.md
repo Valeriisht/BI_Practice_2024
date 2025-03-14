@@ -97,9 +97,9 @@ To explore the data in detail in MicrobiomeAnalyst
 - Kraken2 пытается отнести чтения к различным таксонам на основе эталонной базы данных геномов. Он работает, сравнивая k-меры в чтениях с k-мерами в эталонной базе данных, чтобы определить таксономическое происхождение чтений.
 
 - too large, but command
-  ```conda install kraken2
-kraken2-build --standard --db $DBNAME
-kraken2 --db /path/to/kraken2_database --output output_file --report report_file input_fastq_file```
+```conda install kraken2```
+```kraken2-build --standard --db $DBNAME````
+```kraken2 --db /path/to/kraken2_database --output output_file --report report_file input_fastq_file```
 
 #### 2. Visualization of the Kraken results as a Sankey diagram
 
