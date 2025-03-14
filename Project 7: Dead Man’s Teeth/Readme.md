@@ -108,10 +108,12 @@ To explore the data in detail in MicrobiomeAnalyst
 #### 3. Comparison with ancient Tannerella forsythia genome
 - Download reference 
 - Align contigs on the downloaded reference with bwa mem
-  ```bwa index Tannerella_forsythia_genome.fasta```
-  ```bwa mem Tannerella_forsythia_genome.fasta contigs.fasta > alignment.sam```
-  ```samtools view -S -b alignment50.sam > alignment50.bam```
-- Snalefile in repository
+  ```
+  bwa index Tannerella_forsythia_genome.fasta
+  bwa mem Tannerella_forsythia_genome.fasta contigs.fasta > alignment.sam
+  samtools view -S -b alignment50.sam > alignment50.bam
+  ```
+- Snakefile in repository
 
 
 #### These three bacterial species are called “the red complex”
