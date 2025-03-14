@@ -1,0 +1,58 @@
+
+
+
+reads = ["G12_assembly"]
+
+# Указываем только имя референсного генома 
+REFERENCE = "GCF_001938785.1_ASM193878v1_genomic"
+ANNOTATION = "genome_ref/genomic.gff"  
+
+rule all:
+    input:
+        expand("{reference}.{sample}.sorted.bam", reference=REFERENCE, sample=reads),
+        expand("{reference}.{sample}.bed", reference=REFERENCE, sample=reads),
+        expand("{reference}.{sample}.new_regions.bed", reference=REFERENCE, sample=reads)
+
+rule bwa_map:
+    input:
+        "genome_ref/{reference}.fna.amb",
+        "genome_ref/{reference}.fna.ann",
+        "genome_ref/{reference}.fna.bwt",
+        "genome_ref/{reference}.fna.pac",
+        "genome_ref/{reference}.fna.sa",
+        ref="genome_ref/{reference}.fna",
+        sample="{sample}.fna"
+    threads: 16
+    log: "{reference}.{sample}.bwa.log"
+    output:
+        "{reference}.{sample}.sorted.bam",
+        "{reference}.{sample}.sorted.bam.bai"
+    shell:
+        """
+        bwa mem -t {threads} {input.ref} {input.sample} 2>{log} | samtools view -S -b | samtools sort -o {output[0]} - && samtools index {output[0]}
+        """
+
+rule bam_to_bed:
+    input: 
+        "{reference}.{sample}.sorted.bam"
+    log: 
+        "{reference}.{sample}.bed.log"
+    output: 
+        "{reference}.{sample}.bed"
+    shell: 
+        """
+        bedtools bamtobed -i {input} > {output} 2>{log}
+        """
+
+rule intersect_with_annotation:
+    input: 
+        bed="{reference}.{sample}.bed",
+        annotation=ANNOTATION
+    log: 
+        "{reference}.{sample}.vs_annotation.intersect.log"
+    output: 
+        final="{reference}.{sample}.new_regions.bed"
+    shell: 
+        """
+        bedtools intersect -a {input.annotation} -b {input.bed}  -v > {output.final} 2>{log}
+        """
