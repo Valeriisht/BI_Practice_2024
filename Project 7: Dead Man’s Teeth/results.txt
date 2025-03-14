@@ -1,0 +1,234 @@
+Ген: BGK60_RS14340 Продукт:  Функция: 
+Ген: BGK60_RS14340 Продукт: DUF1566 domain-containing protein Функция: 
+Ген: BGK60_RS14030 Продукт: DUF1566 domain-containing protein Функция: 
+Ген: BGK60_RS14030 Продукт: hypothetical protein Функция: 
+Ген: BGK60_10525 Продукт: hypothetical protein Функция: 
+Ген: BGK60_RS14350 Продукт: DUF4974 domain-containing protein Функция: 
+Ген: BGK60_RS13715 Продукт: DUF4974 domain-containing protein Функция: 
+Ген: BGK60_RS13715 Продукт: hypothetical protein Функция: 
+Ген: BGK60_00640 Продукт: hypothetical protein Функция: 
+Ген: BGK60_RS00475 Продукт: four helix bundle protein Функция: 
+Ген: BGK60_00715 Продукт: four helix bundle protein Функция: 
+Ген: BGK60_RS00550 Продукт: TIGR02221 family CRISPR-associated protein Функция: 
+Ген: BGK60_00720 Продукт: TIGR02221 family CRISPR-associated protein Функция: 
+Ген: BGK60_RS00555 Продукт: CRISPR-associated protein Функция: 
+Ген: BGK60_09360 Продукт: CRISPR-associated protein Функция: 
+Ген: BGK60_RS01010 Продукт: SusD/RagB family nutrient-binding outer membrane lipoprotein Функция: 
+Ген: BGK60_RS14830 Продукт: SusD/RagB family nutrient-binding outer membrane lipoprotein Функция: 
+Ген: BGK60_RS14830 Продукт: transposase family protein Функция: 
+Ген: BGK60_RS14835 Продукт: transposase family protein Функция: 
+Ген: BGK60_RS14835 Продукт: ISAs1 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14365 Продукт: ISAs1 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14365 Продукт: relaxase Функция: transposase activity|0004803||IEA
+Ген: BGK60_12400 Продукт: relaxase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS01430 Продукт: DUF3289 family protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_12405 Продукт: DUF3289 family protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS01435 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_12415 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS01445 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_12420 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS01450 Продукт: DUF4138 domain-containing protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_12425 Продукт: DUF4138 domain-containing protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS01455 Продукт: conjugal transfer protein TraO Функция: transposase activity|0004803||IEA
+Ген: BGK60_12430 Продукт: conjugal transfer protein TraO Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS01460 Продукт: DUF3872 domain-containing protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14370 Продукт: DUF3872 domain-containing protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14370 Продукт: site-specific integrase Функция: transposase activity|0004803||IEA
+Ген: BGK60_12450 Продукт: site-specific integrase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS01485 Продукт: AAA family ATPase Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12455 Продукт: AAA family ATPase Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01490 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12460 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01495 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12465 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01500 Продукт: DNA modification methylase Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12475 Продукт: DNA modification methylase Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01515 Продукт: DUF3872 domain-containing protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12480 Продукт: DUF3872 domain-containing protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01520 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12485 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01525 Продукт: PH domain-containing protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS14840 Продукт: PH domain-containing protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS14840 Продукт: DUF4280 domain-containing protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12490 Продукт: DUF4280 domain-containing protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01535 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12495 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01540 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_12500 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS01545 Продукт: phage baseplate assembly protein V Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_07480 Продукт: phage baseplate assembly protein V Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS14060 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS14065 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS14065 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_07665 Продукт: hypothetical protein Функция: ATP hydrolysis activity|0016887||IEA
+Ген: BGK60_RS02025 Продукт: helix-turn-helix transcriptional regulator Функция: DNA binding|0003677||IEA
+Ген: BGK60_07685 Продукт: helix-turn-helix transcriptional regulator Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02045 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_07690 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02050 Продукт: DGQHR domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_07695 Продукт: DGQHR domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02055 Продукт: restriction endonuclease Функция: DNA binding|0003677||IEA
+Ген: BGK60_02620 Продукт: restriction endonuclease Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02535 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_08075 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02790 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_08090 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02805 Продукт: tyrosine-type recombinase/integrase Функция: DNA binding|0003677||IEA
+Ген: BGK60_08095 Продукт: tyrosine-type recombinase/integrase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02810 Продукт: tyrosine-type recombinase/integrase Функция: DNA binding|0003677||IEA
+Ген: BGK60_08100 Продукт: tyrosine-type recombinase/integrase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS13790 Продукт: site-specific integrase Функция: DNA binding|0003677||IEA
+Ген: BGK60_08105 Продукт: site-specific integrase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02820 Продукт: Cas9 inhibitor AcrIIA9 family protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14860 Продукт: Cas9 inhibitor AcrIIA9 family protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14860 Продукт: antirestriction protein ArdA Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS13545 Продукт: antirestriction protein ArdA Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS13545 Продукт: PcfJ domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_08110 Продукт: PcfJ domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02830 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02920 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02920 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_00260 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02925 Продукт: lantibiotic dehydratase Функция: DNA binding|0003677||IEA
+Ген: BGK60_00265 Продукт: lantibiotic dehydratase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14680 Продукт: thiopeptide-type bacteriocin biosynthesis protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_00270 Продукт: thiopeptide-type bacteriocin biosynthesis protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14685 Продукт: lantibiotic dehydratase C-terminal domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_00330 Продукт: lantibiotic dehydratase C-terminal domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS02995 Продукт: YncE family protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14815 Продукт: YncE family protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14815 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_00465 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14075 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14080 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14080 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_10750 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS03380 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_10755 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS03385 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_10770 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS03400 Продукт: toprim domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_10775 Продукт: toprim domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS03405 Продукт: conjugal transfer protein TraO Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14750 Продукт: conjugal transfer protein TraO Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14750 Продукт: permease of the drug/metabolite transporter Функция: DNA binding|0003677||IEA
+Ген: BGK60_10875 Продукт: permease of the drug/metabolite transporter Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS03520 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_10885 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS03530 Продукт: carboxypeptidase-like regulatory domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_10890 Продукт: carboxypeptidase-like regulatory domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS03535 Продукт: radical SAM protein Функция: catalytic activity|0003824||IEA,4 iron%2C 4 sulfur cluster binding|0051539||IEA,S-adenosyl-L-methionine binding|1904047||IEA
+Ген: BGK60_10895 Продукт: radical SAM protein Функция: catalytic activity|0003824||IEA,4 iron%2C 4 sulfur cluster binding|0051539||IEA,S-adenosyl-L-methionine binding|1904047||IEA
+Ген: BGK60_RS14090 Продукт: hypothetical protein Функция: catalytic activity|0003824||IEA,4 iron%2C 4 sulfur cluster binding|0051539||IEA,S-adenosyl-L-methionine binding|1904047||IEA
+Ген: BGK60_12785 Продукт: hypothetical protein Функция: catalytic activity|0003824||IEA,4 iron%2C 4 sulfur cluster binding|0051539||IEA,S-adenosyl-L-methionine binding|1904047||IEA
+Ген: BGK60_RS04975 Продукт: hypothetical protein Функция: catalytic activity|0003824||IEA,4 iron%2C 4 sulfur cluster binding|0051539||IEA,S-adenosyl-L-methionine binding|1904047||IEA
+Ген: BGK60_12790 Продукт: hypothetical protein Функция: catalytic activity|0003824||IEA,4 iron%2C 4 sulfur cluster binding|0051539||IEA,S-adenosyl-L-methionine binding|1904047||IEA
+Ген: BGK60_RS04980 Продукт: DUF4435 domain-containing protein Функция: catalytic activity|0003824||IEA,4 iron%2C 4 sulfur cluster binding|0051539||IEA,S-adenosyl-L-methionine binding|1904047||IEA
+Ген: BGK60_09965 Продукт: DUF4435 domain-containing protein Функция: catalytic activity|0003824||IEA,4 iron%2C 4 sulfur cluster binding|0051539||IEA,S-adenosyl-L-methionine binding|1904047||IEA
+Ген: BGK60_RS05190 Продукт: IS1595 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_09545 Продукт: IS1595 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14115 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS05705 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS05705 Продукт: transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_05515 Продукт: transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS05760 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14140 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14140 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14145 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14145 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_07735 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS07970 Продукт: tRNA-Leu Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS07970 Продукт: tRNA-Leu Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14150 Продукт: tRNA-Leu Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14150 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_07105 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS08085 Продукт: IS110 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_07245 Продукт: IS110 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS08255 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14450 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14450 Продукт: IS1 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS13590 Продукт: IS1 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS13590 Продукт: restriction endonuclease subunit S Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14455 Продукт: restriction endonuclease subunit S Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14455 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14460 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14460 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_03855 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS08400 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_04590 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS08705 Продукт: IS110 family transposase Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_RS13605 Продукт: IS110 family transposase Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_RS13605 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_12300 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_RS08825 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_12305 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_RS08830 Продукт: helicase-related protein Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_12310 Продукт: helicase-related protein Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_RS08835 Продукт: TetR/AcrR family transcriptional regulator Функция: DNA binding|0003677||IEA,DNA-binding transcription factor activity|0003700||IEA
+Ген: BGK60_12315 Продукт: TetR/AcrR family transcriptional regulator Функция: DNA binding|0003677||IEA,DNA-binding transcription factor activity|0003700||IEA
+Ген: BGK60_RS08840 Продукт: aminotransferase class I/II-fold pyridoxal phosphate-dependent enzyme Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_12320 Продукт: aminotransferase class I/II-fold pyridoxal phosphate-dependent enzyme Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_RS08845 Продукт: DVUA0089 family protein Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_12325 Продукт: DVUA0089 family protein Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_RS08850 Продукт: hypothetical protein Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_12345 Продукт: hypothetical protein Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_RS08875 Продукт: NACHT domain-containing protein Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_12350 Продукт: NACHT domain-containing protein Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_RS08880 Продукт: GTP pyrophosphokinase Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_12355 Продукт: GTP pyrophosphokinase Функция: acyltransferase activity%2C transferring groups other than amino-acyl groups|0016747||IEA,pyridoxal phosphate binding|0030170||IEA
+Ген: BGK60_RS14705 Продукт: IS256 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_12360 Продукт: IS256 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS08910 Продукт: helix-turn-helix domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_12375 Продукт: helix-turn-helix domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS08925 Продукт: outer membrane beta-barrel family protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_12380 Продукт: outer membrane beta-barrel family protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS08930 Продукт: radical SAM/SPASM domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14275 Продукт: radical SAM/SPASM domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14275 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14180 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14180 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14185 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14185 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_07330 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS10190 Продукт: IS110 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14525 Продукт: IS110 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14525 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS13620 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS13620 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_07845 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS10375 Продукт: IS110 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS13975 Продукт: IS110 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS13975 Продукт: IS1595 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS10935 Продукт: IS1595 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS10935 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14305 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14305 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14960 Продукт: hypothetical protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14960 Продукт: PH domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14555 Продукт: PH domain-containing protein Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS14555 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS11105 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS11105 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_09070 Продукт: IS1 family transposase Функция: DNA binding|0003677||IEA
+Ген: BGK60_RS11135 Продукт: IS110 family transposase Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_03045 Продукт: IS110 family transposase Функция: DNA binding|0003677||IEA,transposase activity|0004803||IEA
+Ген: BGK60_RS11185 Продукт: IS1595 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_01345 Продукт: IS1595 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS11690 Продукт: 5S ribosomal RNA Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS11690 Продукт: 5S ribosomal RNA Функция: transposase activity|0004803||IEA
+Ген: BGK60_13100 Продукт: 5S ribosomal RNA Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14580 Продукт: RHS repeat-associated core domain-containing protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14245 Продукт: RHS repeat-associated core domain-containing protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14245 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_08395 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS11975 Продукт: tRNA-Arg Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS11975 Продукт: tRNA-Arg Функция: transposase activity|0004803||IEA
+Ген: BGK60_00175 Продукт: tRNA-Arg Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS12250 Продукт: IS1595 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_00925 Продукт: IS1595 family transposase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS12315 Продукт: tRNA-Gly Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS12315 Продукт: tRNA-Gly Функция: transposase activity|0004803||IEA
+Ген: BGK60_01040 Продукт: tRNA-Gly Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS12435 Продукт: histidinol phosphate phosphatase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14330 Продукт: histidinol phosphate phosphatase Функция: transposase activity|0004803||IEA
+Ген: BGK60_RS14330 Продукт: hypothetical protein Функция: transposase activity|0004803||IEA
