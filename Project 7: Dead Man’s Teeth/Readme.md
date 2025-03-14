@@ -106,22 +106,21 @@ kraken2 --db /path/to/kraken2_database --output output_file --report report_file
 #### 3. Comparison with ancient Tannerella forsythia genome
 - Download reference 
 - Align contigs on the downloaded reference with bwa mem
-  ```bwa index Tannerella_forsythia_genome.fasta``
+  ```bwa index Tannerella_forsythia_genome.fasta```
   ```bwa mem Tannerella_forsythia_genome.fasta contigs.fasta > alignment.sam```
   ```samtools view -S -b alignment50.sam > alignment50.bam```
 - Snalefile in repository
 
 
-
-
-
-
-
-
 #### These three bacterial species are called “the red complex”
 
+The red complex—among a number of other complexes—were classified by Sigmund Socransky in 1998.
 
+The three members of the red complex are:
 
+- Porphyromonas gingivalis
+- Tannerella forsythia
+- Treponema denticola
 
 Немного про Qiime
 
