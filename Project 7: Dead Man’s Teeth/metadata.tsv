@@ -1,0 +1,11 @@
+sample-id	input	filtered	percentage of input passed filter	denoised	non-chimeric	percentage of input non-chimeric
+#q2:types	numeric	numeric	numeric	numeric	numeric	numeric
+S10-V5-Q-B61-calc	5957	5695	95.6	5575	5559	93.32
+S14-V5-P-B17-calc	4491	4282	95.35	4218	4218	93.92
+S15-V5-R-B78-calc	4212	4037	95.85	3950	3911	92.85
+S16S17-V5-K1-G12-root	5788	5599	96.73	5427	5361	92.62
+S16S17-V5-K2-G12-root	5272	5066	96.09	4884	4862	92.22
+S18S19-V5-L-B17-root	4955	4790	96.67	4680	4680	94.45
+S20S21-V5-M-B61-root	5516	5396	97.82	5240	5182	93.94
+S22S23-V5-N-B78-root	4695	4534	96.57	4382	4261	90.76
+S8-V5-O-G12-calc	5362	5199	96.96	5108	5092	94.96
