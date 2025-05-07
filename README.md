@@ -1,6 +1,6 @@
 #  Лабный журнал 
 
-<img align=right src="https://github.com/user-attachments/assets/78213191-5934-4b27-8612-4f801cffcb37" alt="# Codon-optimization Tool" width="150"/>
+<img align=right src="https://github.com/user-attachments/assets/78213191-5934-4b27-8612-4f801cffcb37" alt="# Codon-optimization Tool" width="100"/>
 
 
 ###  Записаны основые команды, которые были использованы для реализации проектов.
